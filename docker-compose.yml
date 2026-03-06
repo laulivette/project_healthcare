@@ -14,5 +14,22 @@ services:
     depends_on:
       - mongodb
 
+  api:
+    build: ./api
+    container_name: api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+      - python_app
+
+  dashboard:
+    build: ./dashboard
+    container_name: dashboard
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
 volumes:
   mongo_data:
