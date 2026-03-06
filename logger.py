@@ -135,3 +135,4 @@ if __name__ == "__main__":
 
     print("\n=== VUE PATIENT (mauvaise personne) ===")
     log_patient_data(exemple, role="patient", requester_name="Leslie Terry")
+#test
